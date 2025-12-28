@@ -1,0 +1,13 @@
+<h1>Add Cost to "{{ session.title }}"</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Cost</button>
+</form>
+<a href="{% url 'session_detail' session.id %}">Back</a>
+<h1>Add Research Cost</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Add Cost</button>
+</form>

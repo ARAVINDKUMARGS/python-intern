@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reasonings List</title>
+</head>
+<body>
+    <h1>Reasonings</h1>
+    {% for reasoning in reasonings %}
+        <p>{{ reasoning.title }}</p>
+    {% empty %}
+        <p>No reasonings available.</p>
+    {% endfor %}
+</body>
+</html>
+<!-- research_app/templates/research_app/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deep Research System</title>
+</head>
+<body>
+    <h1>Welcome to Deep Research System</h1>
+    <a href="{% url 'reasoning-list' %}">Go to Reasonings</a>
+</body>
+</html>
+

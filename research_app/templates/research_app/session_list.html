@@ -1,0 +1,7 @@
+<h1>Research Sessions</h1>
+<ul>
+{% for session in sessions %}
+    <li>{{ session.title }} - {{ session.description }}</li>
+{% endfor %}
+</ul>
+<a href="{% url 'home' %}">Back to Home</a>

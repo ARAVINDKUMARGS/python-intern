@@ -1,0 +1,7 @@
+<h1>Research Costs</h1>
+<ul>
+{% for cost in costs %}
+    <li>{{ cost.cost }} - {{ cost.session }}</li>
+{% endfor %}
+</ul>
+<a href="{% url 'home' %}">Back to Home</a>

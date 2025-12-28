@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Details</title>
+</head>
+<body>
+    <h1>{{ session.name }}</h1>
+    <p>{{ session.description }}</p>
+
+    <h2>Documents</h2>
+    <ul>
+        {% for doc in session.documents.all %}
+            <li><a href="{{ doc.file.url }}">{{ doc.file.name }}</a></li>
+        {% empty %}
+            <li>No documents uploaded.</li>
+        {% endfor %}
+    </ul>
+
+    <p><a href="{% url 'home' %}">Back to Home</a></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Details</title>
+</head>
+<body>
+    <h1>Session {{ session.id }} Details</h1>
+    <p>Description: {{ session.description }}</p>
+    <h2>Documents</h2>
+    <ul>
+        {% for doc in session.documents.all %}
+            <li><a href="{{ doc.file.url }}">{{ doc.file.name }}</a></li>
+        {% empty %}
+            <li>No documents uploaded.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

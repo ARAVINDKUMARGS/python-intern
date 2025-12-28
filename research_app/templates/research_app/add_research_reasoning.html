@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Research Reasoning</title>
+</head>
+<body>
+    <h1>Add Research Reasoning</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'research_reasoning_list' %}">Back to Reasoning</a>
+</body>
+</html>

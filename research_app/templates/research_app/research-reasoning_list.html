@@ -1,0 +1,17 @@
+<!-- research_reasoning_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Research Reasonings</title>
+</head>
+<body>
+    <h1>Reasonings List</h1>
+    <ul>
+        {% for reasoning in reasonings %}
+            <li>{{ reasoning.title }}</li>
+        {% empty %}
+            <li>No reasonings found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

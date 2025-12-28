@@ -1,0 +1,13 @@
+<h1>Add Reasoning to "{{ session.title }}"</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Reasoning</button>
+</form>
+<a href="{% url 'session_detail' session.id %}">Back</a>
+<h1>Add Research Reasoning</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Add Reasoning</button>
+</form>
