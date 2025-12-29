@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Reasonings List</title>
-</head>
-<body>
-    <h1>Reasonings</h1>
-    {% for reasoning in reasonings %}
-        <p>{{ reasoning.title }}</p>
-    {% empty %}
-        <p>No reasonings available.</p>
-    {% endfor %}
-</body>
-</html>
-<!-- research_app/templates/research_app/home.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Deep Research System</title>
+    <title>Home</title>
 </head>
 <body>
     <h1>Welcome to Deep Research System</h1>
-    <a href="{% url 'reasoning-list' %}">Go to Reasonings</a>
 </body>
 </html>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Research System</title>
+    <link rel="stylesheet" href="{% static 'research/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Deep Research System</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Research</a>
+            <a href="#">Profile</a>
+        </nav>
+    </header>
 
+    <main>
+        <section class="search-section">
+            <input type="text" id="query" placeholder="Enter research topic...">
+            <button onclick="runSearch()">Search</button>
+        </section>
+
+        <section id="results">
+            <!-- AI results will appear here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Deep Research System</p>
+    </footer>
+
+    <script src="{% static 'research/js/script.js' %}"></script>
+</body>
+</html>
