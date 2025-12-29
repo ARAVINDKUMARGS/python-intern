@@ -116,3 +116,17 @@ def search_results(request):
 
     return JsonResponse({'result': result})
 
+from django.shortcuts import render
+from django.http import JsonResponse
+
+def home(request):
+    return render(request, "research/home.html")  # Must match folder structure
+
+def search(request):
+    topic = request.GET.get('topic', '')
+    if topic:
+        # Example: return dummy AI result
+        result = f"AI result for '{topic}'"
+        return JsonResponse({'result': result})
+    else:
+        return JsonResponse({'result': 'Please enter a topic'})

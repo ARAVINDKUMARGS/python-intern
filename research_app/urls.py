@@ -51,3 +51,10 @@ urlpatterns = [
     path('', views.home, name='home'),  # Home page
     path('search/', views.search_results, name='search_results'),  # For AJAX/POST search
 ]
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),  # Home page
+    path('search/', views.search, name='search'),  # Search AJAX
+]
